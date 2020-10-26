@@ -64,16 +64,16 @@ def send_mail():
 # availability checker
 def fe_checker():
     while True:
-        cur_time = strftime(Fore.GREEN + "%H:%M:%S", localtime())
+        cur_time = strftime("%H:%M:%S", localtime())
         fe_avail = soup.find(style = "padding:0 8px").text
         if fe_avail == str("Sold Out"):
-            print(cur_time, Fore.WHITE + "::", Fore.CYAN + "[Best-Buy(US)]", Style.RESET_ALL, 
+            print(cur_time, Fore.WHITE + "::", Fore.BLUE + "[Best-Buy(US)]", Style.RESET_ALL, 
                 Fore.CYAN + "Nvidia RTX 3080 FE", Fore.WHITE + "::", Fore.RED + "Sold-Out")
             print(Fore.WHITE + "-------------------------------------------------------------")
             print(Style.RESET_ALL)
             sleep(5)
         elif fe_avail == str("Add to Cart"):
-            print(cur_time, Fore.WHITE + "::", Fore.CYAN + "[Best-Buy(US)]", Style.RESET_ALL,
+            print(cur_time, Fore.WHITE + "::", Fore.BLUE + "[Best-Buy(US)]", Style.RESET_ALL,
                 Fore.CYAN + "Nvidia RTX 3080 FE", Fore.WHITE + "::", Fore.GREEN + "Available")
             print(Fore.WHITE + "-------------------------------------------------------------")
             print(Style.RESET_ALL)
