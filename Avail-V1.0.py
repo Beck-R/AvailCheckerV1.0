@@ -1,4 +1,3 @@
-# can use colorama library to output colored text to cmd
 import sys
 import smtplib
 import datetime
